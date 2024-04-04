@@ -40,7 +40,7 @@ namespace SistemaTienda.VISTA.VentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int idVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdVenta"].Value);
+            int idVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             VentaEditarVista fr = new VentaEditarVista(idVentaSeleccionada);
             if (fr.ShowDialog() == DialogResult.OK)
             {
@@ -50,7 +50,7 @@ namespace SistemaTienda.VISTA.VentaVistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int idVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdVenta"].Value);
+            int idVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DialogResult result = MessageBox.Show("¿Estás seguro de eliminar esta venta?", "Eliminación", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

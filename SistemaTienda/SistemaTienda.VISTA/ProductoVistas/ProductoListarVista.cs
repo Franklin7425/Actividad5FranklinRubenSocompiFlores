@@ -35,7 +35,7 @@ namespace SistemaTienda.VISTA.ProductoVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int idProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdProducto"].Value);
+            int idProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             ProductoEditarVista fr = new ProductoEditarVista(idProductoSeleccionado);
             if (fr.ShowDialog() == DialogResult.OK)
             {
@@ -45,7 +45,7 @@ namespace SistemaTienda.VISTA.ProductoVistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int idProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdProducto"].Value);
+            int idProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DialogResult result = MessageBox.Show("¿Estás seguro de eliminar este producto?", "Eliminación", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
