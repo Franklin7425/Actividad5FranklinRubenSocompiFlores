@@ -39,7 +39,7 @@ namespace SistemaTienda.VISTA.DetalleVentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int idDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdDetalleVenta"].Value);
+            int idDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DetalleVentaEditarVista fr = new DetalleVentaEditarVista(idDetalleVentaSeleccionado);
             if (fr.ShowDialog() == DialogResult.OK)
             {
@@ -49,7 +49,7 @@ namespace SistemaTienda.VISTA.DetalleVentaVistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int idDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdDetalleVenta"].Value);
+            int idDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DialogResult result = MessageBox.Show("¿Estás seguro de eliminar este detalle de venta?", "Eliminación", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
